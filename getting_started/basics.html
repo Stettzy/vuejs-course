@@ -1,33 +1,36 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Document</title>
-        <script src="https://unpkg.com/vue@3"></script>
-    </head>
-    <body>
-       <div id="app">
-            <!-- Binding the reactive variable from data -->
-            <input type="text" v-model="greeting" />
-            <p>
-                <!-- Moustache syntax that renders the value -->
-                {{ greeting }} {{ greeting.length }}
-            </p>
-       </div>
-        <script>   
-            Vue.createApp({
-                data() {
-                    // Defining the data that we're going to work with (which is part of the component's state)
-                    return {
-                        greeting: 'Hello World'
-                    }
-                },
-                mounted() {
-                    // Executes once the component is mounted to the DOM
-                    setTimeout(() => {
-                        this.greeting = 'changed'
-                    }, 3000);
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Binding the reactive variable from data -->
+        <input type="text" v-model="greeting" />
+        <p>
+            <!-- Moustache syntax that renders the value -->
+            {{ greeting }} {{ greeting.length }}
+        </p>
+    </div>
+    <script>
+        Vue.createApp({
+            data() {
+                // Defining the data that we're going to work with (which is part of the component's state)
+                return {
+                    greeting: 'Hello World'
                 }
-            }).mount('#app');
-        </script>
-    </body>
+            },
+            mounted() {
+                // Executes once the component is mounted to the DOM
+                setTimeout(() => {
+                    this.greeting = 'changed'
+                }, 3000);
+            }
+        }).mount('#app');
+    </script>
+</body>
+
 </html>
