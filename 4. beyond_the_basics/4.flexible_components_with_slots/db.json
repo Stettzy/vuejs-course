@@ -1,0 +1,7 @@
+{
+    "assignments": [
+        { "id": 1, "name": "Finish homework", "complete": false, "tag": "Science" },
+        { "id": 2, "name": "Read book", "complete": false, "tag": "Math" },
+        { "id": 3, "name": "Submit paper", "complete": false, "tag": "Geography" }
+    ]
+}
