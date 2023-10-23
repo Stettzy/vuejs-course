@@ -1,0 +1,31 @@
+{
+    "name": "Smiley",
+    "spots": 6,
+    "members": [
+        {
+            "name": "John Dohn",
+            "email": "john@doe.com",
+            "status": "Active"
+        },
+        {
+            "name": "John Dohn",
+            "email": "john@doe.com",
+            "status": "Active"
+        },
+        {
+            "name": "John Dohn",
+            "email": "john@doe.com",
+            "status": "Active"
+        },
+        {
+            "name": "John Dohn",
+            "email": "john@doe.com",
+            "status": "Active"
+        },
+        {
+            "name": "John Dohn",
+            "email": "john@doe.com",
+            "status": "Active"
+        }
+    ]
+}
