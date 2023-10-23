@@ -1,16 +1,14 @@
 <script setup>
-import { ref, provide } from "vue";
+import { ref } from "vue";
 import TabableTextarea from "@/components/TabableTextarea.vue";
 
 let comment = ref("Your comment");
-
-provide("comment", comment);
 </script>
 
 <template>
   <main>
     <form>
-      <TabableTextarea style="height: 300px; width: 100%" />
+      <TabableTextarea v-model="comment" style="height: 300px; width: 100%" />
     </form>
   </main>
 </template>

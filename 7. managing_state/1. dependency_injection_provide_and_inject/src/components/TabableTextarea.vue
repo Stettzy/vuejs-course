@@ -1,5 +1,9 @@
 <script setup>
-import { inject } from "vue";
+defineProps({
+  modelValue: String,
+});
+
+let emit = defineEmits(["update:modelValue"]);
 
 const onTabPress = (e) => {
   let textarea = e.target;
@@ -10,13 +14,12 @@ const onTabPress = (e) => {
 
   textarea.value = val.substring(0, start) + "\t" + val.substring(end);
 };
-
-let comment = inject("comment");
 </script>
 
 <template>
   <textarea
     @keydown.tab.prevent="onTabPress"
-    @keyup="comment = $event.target.value"
+    @keyup="emit('update:modelValue', $event.target.value)"
+    v-model="comment"
   ></textarea>
 </template>
