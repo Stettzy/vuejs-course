@@ -8,7 +8,7 @@ let comment = ref("Your comment");
 <template>
   <main>
     <form>
-      <TabableTextarea :modelValue="comment" style="height: 300px; width: 100%" />
+      <TabableTextarea v-model="comment" style="height: 300px; width: 100%" />
     </form>
   </main>
 </template>

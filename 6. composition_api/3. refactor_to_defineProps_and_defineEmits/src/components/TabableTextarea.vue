@@ -14,17 +14,12 @@ const onTabPress = (e) => {
 
   textarea.value = val.substring(0, start) + "\t" + val.substring(end);
 };
-
-const update = (e) => {
-  emit("update:modelValue", e.target.value);
-};
 </script>
 
 <template>
   <textarea
-    ref="textarea"
     @keydown.tab.prevent="onTabPress"
-    @keyup.prevet="update"
-    v-text="modelValue"
+    @keyup="emit('update:modelValue', $event.target.value)"
+    v-model="comment"
   ></textarea>
 </template>
