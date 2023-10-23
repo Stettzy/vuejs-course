@@ -1,9 +1,8 @@
 <script setup>
+import { store } from "../stores/textareaStore";
 defineProps({
-  modelValue: String,
+  comment: String,
 });
-
-let emit = defineEmits(["update:modelValue"]);
 
 const onTabPress = (e) => {
   let textarea = e.target;
@@ -16,15 +15,15 @@ const onTabPress = (e) => {
 };
 
 const update = (e) => {
-  emit("update:modelValue", e.target.value);
+  console.log();
+  store.name = e.target.value;
 };
 </script>
 
 <template>
   <textarea
-    ref="textarea"
     @keydown.tab.prevent="onTabPress"
-    @keyup.prevet="update"
-    v-text="modelValue"
+    @input="update"
+    v-text="store.name"
   ></textarea>
 </template>
